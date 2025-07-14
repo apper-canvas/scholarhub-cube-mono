@@ -61,12 +61,42 @@ function Sidebar({ className, isMobileOpen, toggleMobile }) {
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className="lg:hidden fixed inset-y-0 left-0 z-50 w-80 bg-white border-r border-gray-200 shadow-xl"
       >
-        <div className="p-6 border-b border-gray-200">
+<div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="h-10 w-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <ApperIcon name="GraduationCap" className="h-6 w-6 text-white" />
               </div>
+              <div>
+                <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  ScholarHub
+                </h1>
+                <p className="text-xs text-gray-500">Student Management</p>
+              </div>
+            </div>
+            <button
+              onClick={toggleMobile}
+              className="p-2 hover:bg-gray-100 rounded-lg"
+            >
+              <ApperIcon name="X" className="h-5 w-5 text-gray-600" />
+            </button>
+          </div>
+        </div>
+
+        <nav className="flex-1 p-4 space-y-2">
+          {navItems.map((item) => (
+            <NavItem key={item.to} {...item} />
+          ))}
+        </nav>
+
+        <div className="p-4 border-t border-gray-200">
+          <UserInfo />
+        </div>
+      </motion.div>
+    </>
+);
+}
+
 function UserInfo() {
   const { logout } = useContext(AuthContext);
   const { user } = useSelector((state) => state.user);
@@ -100,36 +130,6 @@ function UserInfo() {
         Logout
       </Button>
     </div>
-  );
-}
-
-<div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  ScholarHub
-                </h1>
-                <p className="text-xs text-gray-500">Student Management</p>
-              </div>
-            </div>
-            <button
-              onClick={toggleMobile}
-              className="p-2 hover:bg-gray-100 rounded-lg"
-            >
-              <ApperIcon name="X" className="h-5 w-5 text-gray-600" />
-            </button>
-          </div>
-        </div>
-
-        <nav className="flex-1 p-4 space-y-2">
-          {navItems.map((item) => (
-            <NavItem key={item.to} {...item} />
-          ))}
-        </nav>
-
-        <div className="p-4 border-t border-gray-200">
-          <UserInfo />
-        </div>
-      </motion.div>
-    </>
   );
 }
 
