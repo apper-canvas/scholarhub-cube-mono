@@ -18,12 +18,14 @@ const GradeGrid = ({ grades, students, assignments, onGradeUpdate, onAddAssignme
     return grades.find(g => g.studentId === studentId && g.assignmentId === assignmentId);
   };
 
-  const getStudentAverage = (studentId) => {
+const getStudentAverage = (studentId) => {
     const studentGrades = grades.filter(g => g.studentId === studentId);
     if (studentGrades.length === 0) return null;
     
     const total = studentGrades.reduce((sum, grade) => {
       const assignment = assignments.find(a => a.id === grade.assignmentId);
+      // Skip grades where assignment is not found
+      if (!assignment) return sum;
       return sum + (grade.score / assignment.maxScore) * 100;
     }, 0);
     
