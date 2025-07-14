@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-export const gradeService = {
+export const assignmentService = {
   async getAll() {
     try {
       const { ApperClient } = window.ApperSDK;
@@ -12,19 +12,16 @@ export const gradeService = {
       const params = {
         fields: [
           { "field": { "Name": "Name" } },
-          { "field": { "Name": "assignmentName" } },
           { "field": { "Name": "category" } },
-          { "field": { "Name": "score" } },
           { "field": { "Name": "maxScore" } },
-          { "field": { "Name": "date" } },
-          { "field": { "Name": "studentId" } },
           { "field": { "Name": "classId" } },
+          { "field": { "Name": "date" } },
           { "field": { "Name": "Tags" } },
           { "field": { "Name": "Owner" } }
         ]
       };
 
-      const response = await apperClient.fetchRecords("grade", params);
+      const response = await apperClient.fetchRecords("assignment", params);
 
       if (!response.success) {
         console.error(response.message);
@@ -35,7 +32,7 @@ export const gradeService = {
       return response.data || [];
     } catch (error) {
       if (error?.response?.data?.message) {
-        console.error("Error fetching grades:", error?.response?.data?.message);
+        console.error("Error fetching assignments:", error?.response?.data?.message);
       } else {
         console.error(error.message);
       }
@@ -54,19 +51,16 @@ export const gradeService = {
       const params = {
         fields: [
           { "field": { "Name": "Name" } },
-          { "field": { "Name": "assignmentName" } },
           { "field": { "Name": "category" } },
-          { "field": { "Name": "score" } },
           { "field": { "Name": "maxScore" } },
-          { "field": { "Name": "date" } },
-          { "field": { "Name": "studentId" } },
           { "field": { "Name": "classId" } },
+          { "field": { "Name": "date" } },
           { "field": { "Name": "Tags" } },
           { "field": { "Name": "Owner" } }
         ]
       };
 
-      const response = await apperClient.getRecordById("grade", id, params);
+      const response = await apperClient.getRecordById("assignment", id, params);
 
       if (!response.success) {
         console.error(response.message);
@@ -77,7 +71,7 @@ export const gradeService = {
       return response.data;
     } catch (error) {
       if (error?.response?.data?.message) {
-        console.error(`Error fetching grade with ID ${id}:`, error?.response?.data?.message);
+        console.error(`Error fetching assignment with ID ${id}:`, error?.response?.data?.message);
       } else {
         console.error(error.message);
       }
@@ -85,7 +79,7 @@ export const gradeService = {
     }
   },
 
-  async create(gradeData) {
+  async create(assignmentData) {
     try {
       const { ApperClient } = window.ApperSDK;
       const apperClient = new ApperClient({
@@ -95,20 +89,17 @@ export const gradeService = {
 
       const params = {
         records: [{
-          Name: gradeData.assignmentName,
-          assignmentName: gradeData.assignmentName,
-          category: gradeData.category,
-          score: gradeData.score,
-          maxScore: gradeData.maxScore,
-          date: gradeData.date,
-          studentId: gradeData.studentId,
-          classId: gradeData.classId,
-          Tags: gradeData.Tags || "",
-          Owner: gradeData.Owner || null
+          Name: assignmentData.name,
+          category: assignmentData.category,
+          maxScore: assignmentData.maxScore,
+          classId: assignmentData.classId,
+          date: assignmentData.date,
+          Tags: assignmentData.Tags || "",
+          Owner: assignmentData.Owner || null
         }]
       };
 
-      const response = await apperClient.createRecord("grade", params);
+      const response = await apperClient.createRecord("assignment", params);
 
       if (!response.success) {
         console.error(response.message);
@@ -139,7 +130,7 @@ export const gradeService = {
       return null;
     } catch (error) {
       if (error?.response?.data?.message) {
-        console.error("Error creating grade:", error?.response?.data?.message);
+        console.error("Error creating assignment:", error?.response?.data?.message);
       } else {
         console.error(error.message);
       }
@@ -147,7 +138,7 @@ export const gradeService = {
     }
   },
 
-  async update(id, gradeData) {
+  async update(id, assignmentData) {
     try {
       const { ApperClient } = window.ApperSDK;
       const apperClient = new ApperClient({
@@ -158,20 +149,17 @@ export const gradeService = {
       const params = {
         records: [{
           Id: id,
-          Name: gradeData.assignmentName,
-          assignmentName: gradeData.assignmentName,
-          category: gradeData.category,
-          score: gradeData.score,
-          maxScore: gradeData.maxScore,
-          date: gradeData.date,
-          studentId: gradeData.studentId,
-          classId: gradeData.classId,
-          Tags: gradeData.Tags || "",
-          Owner: gradeData.Owner || null
+          Name: assignmentData.name,
+          category: assignmentData.category,
+          maxScore: assignmentData.maxScore,
+          classId: assignmentData.classId,
+          date: assignmentData.date,
+          Tags: assignmentData.Tags || "",
+          Owner: assignmentData.Owner || null
         }]
       };
 
-      const response = await apperClient.updateRecord("grade", params);
+      const response = await apperClient.updateRecord("assignment", params);
 
       if (!response.success) {
         console.error(response.message);
@@ -202,7 +190,7 @@ export const gradeService = {
       return null;
     } catch (error) {
       if (error?.response?.data?.message) {
-        console.error("Error updating grade:", error?.response?.data?.message);
+        console.error("Error updating assignment:", error?.response?.data?.message);
       } else {
         console.error(error.message);
       }
@@ -222,7 +210,7 @@ export const gradeService = {
         RecordIds: [id]
       };
 
-      const response = await apperClient.deleteRecord("grade", params);
+      const response = await apperClient.deleteRecord("assignment", params);
 
       if (!response.success) {
         console.error(response.message);
@@ -248,48 +236,11 @@ export const gradeService = {
       return false;
     } catch (error) {
       if (error?.response?.data?.message) {
-        console.error("Error deleting grade:", error?.response?.data?.message);
+        console.error("Error deleting assignment:", error?.response?.data?.message);
       } else {
         console.error(error.message);
       }
       return false;
-    }
-  },
-
-  async updateGrade(studentId, assignmentId, score) {
-    try {
-      // First, try to find existing grade
-      const existingGrades = await this.getAll();
-      const existingGrade = existingGrades.find(g => 
-        g.studentId === studentId && g.assignmentName === assignmentId
-      );
-
-      if (existingGrade) {
-        // Update existing grade
-        return await this.update(existingGrade.Id, {
-          ...existingGrade,
-          score: score
-        });
-      } else {
-        // Create new grade
-        const newGradeData = {
-          assignmentName: assignmentId,
-          score: score,
-          maxScore: 100, // Default max score
-          date: new Date().toISOString().split('T')[0],
-          studentId: studentId,
-          category: "homework" // Default category
-        };
-        
-        return await this.create(newGradeData);
-      }
-    } catch (error) {
-      if (error?.response?.data?.message) {
-        console.error("Error updating grade:", error?.response?.data?.message);
-      } else {
-        console.error(error.message);
-      }
-      return null;
     }
   }
 };
