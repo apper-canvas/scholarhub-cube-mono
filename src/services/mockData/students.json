@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "firstName": "Emma",
+    "lastName": "Johnson",
+    "email": "emma.johnson@school.edu",
+    "studentId": "ST001",
+    "dateOfBirth": "2008-03-15",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 10,
+    "status": "active"
+  },
+  {
+    "Id": 2,
+    "firstName": "Michael",
+    "lastName": "Chen",
+    "email": "michael.chen@school.edu",
+    "studentId": "ST002",
+    "dateOfBirth": "2007-11-08",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 11,
+    "status": "active"
+  },
+  {
+    "Id": 3,
+    "firstName": "Sarah",
+    "lastName": "Williams",
+    "email": "sarah.williams@school.edu",
+    "studentId": "ST003",
+    "dateOfBirth": "2008-01-22",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 10,
+    "status": "active"
+  },
+  {
+    "Id": 4,
+    "firstName": "David",
+    "lastName": "Brown",
+    "email": "david.brown@school.edu",
+    "studentId": "ST004",
+    "dateOfBirth": "2007-09-30",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 11,
+    "status": "active"
+  },
+  {
+    "Id": 5,
+    "firstName": "Jessica",
+    "lastName": "Davis",
+    "email": "jessica.davis@school.edu",
+    "studentId": "ST005",
+    "dateOfBirth": "2008-07-14",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 10,
+    "status": "active"
+  },
+  {
+    "Id": 6,
+    "firstName": "Alex",
+    "lastName": "Rodriguez",
+    "email": "alex.rodriguez@school.edu",
+    "studentId": "ST006",
+    "dateOfBirth": "2007-05-18",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 11,
+    "status": "active"
+  },
+  {
+    "Id": 7,
+    "firstName": "Olivia",
+    "lastName": "Martinez",
+    "email": "olivia.martinez@school.edu",
+    "studentId": "ST007",
+    "dateOfBirth": "2008-12-03",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 10,
+    "status": "active"
+  },
+  {
+    "Id": 8,
+    "firstName": "James",
+    "lastName": "Wilson",
+    "email": "james.wilson@school.edu",
+    "studentId": "ST008",
+    "dateOfBirth": "2007-04-25",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 11,
+    "status": "active"
+  },
+  {
+    "Id": 9,
+    "firstName": "Sophia",
+    "lastName": "Anderson",
+    "email": "sophia.anderson@school.edu",
+    "studentId": "ST009",
+    "dateOfBirth": "2008-08-12",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 10,
+    "status": "active"
+  },
+  {
+    "Id": 10,
+    "firstName": "Ryan",
+    "lastName": "Taylor",
+    "email": "ryan.taylor@school.edu",
+    "studentId": "ST010",
+    "dateOfBirth": "2007-06-09",
+    "enrollmentDate": "2023-08-20",
+    "gradeLevel": 11,
+    "status": "active"
+  }
+]

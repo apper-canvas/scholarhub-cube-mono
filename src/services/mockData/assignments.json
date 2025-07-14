@@ -1,0 +1,66 @@
+[
+  {
+    "id": "math-test-1",
+    "name": "Algebra Test",
+    "category": "exam",
+    "maxScore": 100,
+    "classId": 1,
+    "date": "2024-01-15"
+  },
+  {
+    "id": "math-hw-1",
+    "name": "Homework Set 1",
+    "category": "homework",
+    "maxScore": 100,
+    "classId": 1,
+    "date": "2024-01-10"
+  },
+  {
+    "id": "math-quiz-1",
+    "name": "Quick Quiz 1",
+    "category": "quiz",
+    "maxScore": 50,
+    "classId": 1,
+    "date": "2024-01-08"
+  },
+  {
+    "id": "eng-project-1",
+    "name": "Poetry Analysis",
+    "category": "project",
+    "maxScore": 100,
+    "classId": 2,
+    "date": "2024-01-12"
+  },
+  {
+    "id": "eng-hw-1",
+    "name": "Reading Assignment",
+    "category": "homework",
+    "maxScore": 50,
+    "classId": 2,
+    "date": "2024-01-05"
+  },
+  {
+    "id": "chem-lab-1",
+    "name": "Lab Report 1",
+    "category": "project",
+    "maxScore": 100,
+    "classId": 3,
+    "date": "2024-01-18"
+  },
+  {
+    "id": "hist-test-1",
+    "name": "Chapter 1 Test",
+    "category": "exam",
+    "maxScore": 100,
+    "classId": 4,
+    "date": "2024-01-20"
+  },
+  {
+    "id": "pe-participation-1",
+    "name": "Weekly Participation",
+    "category": "participation",
+    "maxScore": 100,
+    "classId": 5,
+    "date": "2024-01-15"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "studentId": 1,
+    "classId": 1,
+    "assignmentName": "Algebra Test",
+    "category": "exam",
+    "score": 92,
+    "maxScore": 100,
+    "date": "2024-01-15"
+  },
+  {
+    "Id": 2,
+    "studentId": 1,
+    "classId": 1,
+    "assignmentName": "Homework Set 1",
+    "category": "homework",
+    "score": 85,
+    "maxScore": 100,
+    "date": "2024-01-10"
+  },
+  {
+    "Id": 3,
+    "studentId": 2,
+    "classId": 2,
+    "assignmentName": "Poetry Analysis",
+    "category": "project",
+    "score": 88,
+    "maxScore": 100,
+    "date": "2024-01-12"
+  },
+  {
+    "Id": 4,
+    "studentId": 3,
+    "classId": 1,
+    "assignmentName": "Algebra Test",
+    "category": "exam",
+    "score": 76,
+    "maxScore": 100,
+    "date": "2024-01-15"
+  },
+  {
+    "Id": 5,
+    "studentId": 4,
+    "classId": 2,
+    "assignmentName": "Poetry Analysis",
+    "category": "project",
+    "score": 95,
+    "maxScore": 100,
+    "date": "2024-01-12"
+  },
+  {
+    "Id": 6,
+    "studentId": 5,
+    "classId": 1,
+    "assignmentName": "Algebra Test",
+    "category": "exam",
+    "score": 83,
+    "maxScore": 100,
+    "date": "2024-01-15"
+  },
+  {
+    "Id": 7,
+    "studentId": 6,
+    "classId": 2,
+    "assignmentName": "Poetry Analysis",
+    "category": "project",
+    "score": 90,
+    "maxScore": 100,
+    "date": "2024-01-12"
+  },
+  {
+    "Id": 8,
+    "studentId": 7,
+    "classId": 1,
+    "assignmentName": "Algebra Test",
+    "category": "exam",
+    "score": 89,
+    "maxScore": 100,
+    "date": "2024-01-15"
+  },
+  {
+    "Id": 9,
+    "studentId": 8,
+    "classId": 2,
+    "assignmentName": "Poetry Analysis",
+    "category": "project",
+    "score": 87,
+    "maxScore": 100,
+    "date": "2024-01-12"
+  },
+  {
+    "Id": 10,
+    "studentId": 9,
+    "classId": 1,
+    "assignmentName": "Algebra Test",
+    "category": "exam",
+    "score": 94,
+    "maxScore": 100,
+    "date": "2024-01-15"
+  }
+]
