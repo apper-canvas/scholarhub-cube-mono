@@ -23,18 +23,18 @@ const Dashboard = () => {
   const loading = studentsLoading || classesLoading || gradesLoading || attendanceLoading;
   const error = studentsError || classesError || gradesError || attendanceError;
 
-  useEffect(() => {
+useEffect(() => {
     if (grades.length > 0 && attendance.length > 0) {
       const activities = [
         ...grades.slice(-5).map(grade => ({
-          id: grade.Id,
+          id: `grade-${grade.Id || grade.id || Math.random()}`,
           type: "grade",
           description: `Grade updated: ${grade.assignmentName}`,
           date: grade.date,
           icon: "Award"
         })),
         ...attendance.slice(-5).map(record => ({
-          id: record.Id,
+          id: `attendance-${record.Id || record.id || Math.random()}`,
           type: "attendance",
           description: `Attendance marked: ${record.status}`,
           date: record.date,
